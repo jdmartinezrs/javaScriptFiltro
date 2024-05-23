@@ -18,3 +18,22 @@ export const getData = async () => {
     return dataUpdate;
 
 };
+
+
+export const getAllMoviesYear = async() =>{
+    let res = await fetch("https://justwatch.imdbot.workers.dev/?q=Niram&L=en_IN")
+    let data = await res.json();
+    let dataUpdate = data.map(val=>{
+        return {
+            
+            Realse: val.originalReleaseYear
+            
+        }
+    })
+    return dataUpdate;
+
+
+}
+
+
+

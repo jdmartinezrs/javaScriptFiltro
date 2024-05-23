@@ -1,4 +1,5 @@
 import { LitElement, css, html} from 'lit'
+import { MyCardsRealseYear } from './card';
 
 
 export class MyMainElement extends LitElement{
@@ -338,55 +339,7 @@ export class MyMainElement extends LitElement{
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             grid-gap: 20px;
         }
-        main .info-data .card {
-            padding: 20px;
-            border-radius: 10px;
-            background: var(--light);
-            box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
-        }
-        main .card .head {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        main .card .head h2 {
-            font-size: 24px;
-            font-weight: 600;
-        }
-        main .card .head p {
-            font-size: 14px;
-        }
-        main .card .head .icon {
-            font-size: 20px;
-            color: var(--green);
-        }
-        main .card .head .icon.down {
-            color: var(--red);
-        }
-        main .card .progress {
-            display: block;
-            margin-top: 24px;
-            height: 10px;
-            width: 100%;
-            border-radius: 10px;
-            background: var(--grey);
-            overflow-y: hidden;
-            position: relative;
-            margin-bottom: 4px;
-        }
-        main .card .progress::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            background: var(--blue);
-            width: var(--value);
-        }
-        main .card .label {
-            font-size: 14px;
-            font-weight: 700;
-        }
+     
         main .data {
             display: flex;
             grid-gap: 20px;
@@ -655,28 +608,7 @@ export class MyMainElement extends LitElement{
                             <li><a href="#" class="active">Dashboard</a></li>
                         </ul>
                         <div class="info-data">
-                            <div class="card">
-                                <div class="head">
-                                    <div>
-                                        <h2>1500</h2>
-                                        <p>Traffic</p>
-                                    </div>
-                                    <i class='bx bx-trending-up icon' ></i>
-                                </div>
-                                <span class="progress" data-value="40%"></span>
-                                <span class="label">40%</span>
-                            </div>
-                            <div class="card">
-                                <div class="head">
-                                    <div>
-                                        <h2>234</h2>
-                                        <p>Sales</p>
-                                    </div>
-                                    <i class='bx bx-trending-down icon down' ></i>
-                                </div>
-                                <span class="progress" data-value="60%"></span>
-                                <span class="label">60%</span>
-                            </div>
+                           <my-card></my-card>
                             <div class="card">
                                 <div class="head">
                                     <div>
