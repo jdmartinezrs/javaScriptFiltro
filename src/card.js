@@ -2,10 +2,10 @@ import { getAllMoviesYear } from './consultas';
 
 import { LitElement, css, html} from 'lit'
 export class MyCardsRealseYear extends LitElement{
-    static properties =  {
-        products:{type: Array}
+    // static properties =  {
+    //     products:{type: Array}
 
-    };
+    // };
 
     static styles = css`
     main .info-data .card {
@@ -58,17 +58,17 @@ export class MyCardsRealseYear extends LitElement{
         font-weight: 700;
     }`;
 
-    constructor(){
-        super();
-        this.products =[];
-    }
+    // constructor(){
+    //     super();
+    //     this.products =[];
+    // }
 
-    async connectedCallback(){
-        super.connectedCallback();
-        this.products = await getAllMoviesYear();
+    // async connectedCallback(){
+    //     super.connectedCallback();
+    //     this.products = await getAllMoviesYear();
 
 
-    }
+    // }
 
     render(){
         return html`
@@ -88,8 +88,9 @@ export class MyCardsRealseYear extends LitElement{
 <div class="card">
 <div class="head">
     <div>
-        <h2>${products.name}</h2>
-        <p>${products.dateRealse}</p>
+    
+         <h2>web component</h2>
+        <p>web component</p>
     </div>
     <i class='bx bx-trending-down icon down' ></i>
 </div>
