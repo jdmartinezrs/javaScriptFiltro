@@ -1,6 +1,6 @@
 import { LitElement, css, html} from 'lit'
-import { MyCardsRealseYear } from './card';
 
+import "./card.js"
 
 export class MyMainElement extends LitElement{
     

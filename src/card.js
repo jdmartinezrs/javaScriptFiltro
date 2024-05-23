@@ -65,7 +65,7 @@ export class MyCardsRealseYear extends LitElement{
 
     async connectedCallback(){
         super.connectedCallback();
-        this.products = await MyCardsRealseYear();
+        this.products = await getAllMoviesYear();
 
 
     }
@@ -88,8 +88,8 @@ export class MyCardsRealseYear extends LitElement{
 <div class="card">
 <div class="head">
     <div>
-        <h2>234</h2>
-        <p>Sales</p>
+        <h2>${products.name}</h2>
+        <p>${products.dateRealse}</p>
     </div>
     <i class='bx bx-trending-down icon down' ></i>
 </div>
